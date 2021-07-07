@@ -123,6 +123,15 @@ function setupRW() {
 	if(window.postExploit){
 		document.getElementById("myProgress").remove();
 		document.getElementById("tempo").innerHTML = "<br><br><br><br><br><font style='color:#ee596f'>RISCO DE KERNEL PANIC!!!</font>";
+		rodape(true);
+		localStorage.infoDesb="ATENÇÃO! Aguardando a exploração do kernel...";
+		window.infoDesb.innerHTML=localStorage.infoDesb;
+		if (localStorage.passcount == null) {localStorage.passcount=0;
+		window.passCounter.innerHTML=localStorage.passcount;}
+		if (localStorage.failcount == null) {localStorage.failcount=0;
+		window.failCounter.innerHTML=localStorage.failcount;}
+		if (localStorage.desempenho == null) {localStorage.desempenho="Ainda sem dados para ";
+		window.desempenho.innerHTML=localStorage.desempenho;}
 		window.postExploit(); 
 	}
 
